@@ -1,0 +1,455 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;500&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+   
+  @media (min-width: 915px) { 
+
+    .navbar {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+      top: 0;
+    }
+        
+  .logo img {
+    margin-right: 5vw;
+  }
+
+    .menu {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .menu ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        gap: 20px;
+        flex-direction: row; 
+    }
+
+    .menu ul li {
+        margin-left: 20px; 
+    }
+
+    .menu ul li:first-child {
+        margin-left: 0;
+    }
+
+    .menu ul li a {
+        text-decoration: none;
+        color: #000; 
+        font-weight: 400;
+        font-size: 14px; 
+        position: relative;
+    }
+
+    .menu ul li a::after {
+      content: ''; 
+      display: block;
+      width: 0; 
+      height: 2px; 
+      background-color: #DD71C6; 
+      position: absolute;
+      bottom: -5px; 
+      left: 0;
+      transition: width 0.3s ease; 
+     
+    }
+
+    .menu ul li a:hover::after {
+      width: 100%; 
+    }
+  
+    .menu-toggle {
+        display: none; 
+    }
+
+    .logo {
+        display: block; 
+    }
+
+    .box-countdown {
+      max-width: 30%;
+       
+  }
+  .box-countdown:hover {
+    transform: scale(1.1);
+    background: linear-gradient(to right, #f3bde7, #ffffff);
+    cursor: pointer;
+  }
+  } 
+
+  @media(max-width: 915px){
+    .navbar {
+      display: flex;
+      align-items: flex-start;
+      padding: 10px;
+      justify-content: space-between;
+      font-family: 'Montserrat', sans-serif;
+      top: 0;
+      width: 100%;    
+    }
+
+    .logo img {
+      margin-right: 20px;
+      width: 80%;
+    }
+
+    .menu-toggle {
+      display: block;
+      cursor: pointer;
+      margin-right: 20px;
+      position: fixed;
+      right: 0;
+    }
+
+    .menu-toggle:hover {
+      transform: scale(1.1); 
+      
+    }
+
+    .bar {
+      width: 25px;
+      height: 3px;
+      background-color: #DD71C6;
+      margin: 4px 0;
+      border-radius: 5px;
+    }
+
+    .menu {
+      display: none;
+      position: fixed;
+      background-color: #b9b9b9;
+      border-radius: 20px 0 0 20px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+      width: 200px;
+      right: 0;
+      top: 47px;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    }
+  
+    .menu.show {
+      display: block;
+      opacity: 1; 
+      transform: translateY(0); 
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      display: block;
+      transition: background-color 0.3s;
+    }
+
+    .menu a:hover {
+      background-color: #DD71C6 ;
+      background-color: #DD71C6(255, 255, 255, 0.2);
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .menu ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .box-countdown {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      background-color: #F9F9F9;
+      border-radius: 10px;
+      max-width: 40%;
+      margin: 0 auto;
+      border-radius: 50px;
+    }
+
+    .countdown-time {
+      font-size: 1.5rem; 
+  }
+
+    #offer-text {
+      color: #333333;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 24px;
+      margin-bottom: 10px; 
+    }
+
+  }
+
+  @media (max-width: 320px) {
+
+    .countdown-container {
+      gap: 10px; 
+      font-size: 14px; 
+      margin: 0 auto; 
+      max-width: 80%; 
+    }
+
+    #offer-text {
+      margin-bottom: 5px; 
+    }
+
+    .countdown-item {
+      max-width: none; 
+    }
+  }
+
+  @media (max-width: 360px) {
+
+  .countdown-container {
+    gap: 10px; 
+    font-size: 14px; 
+    margin: 0 auto; 
+    max-width: 80%; 
+  }
+
+  #offer-text {
+    margin-bottom: 5px; 
+  }
+
+  .countdown-item {
+    max-width: none; 
+  }
+  }
+
+  @media (max-width: 768px)  {
+
+    .navbar {
+      display: flex;
+      align-items: flex-start;
+      padding: 10px;
+      justify-content: space-between;
+      font-family: 'Montserrat', sans-serif;
+      top: 0;
+      width: 95%;    
+    }
+
+    .logo img {
+      margin-right: 20px;
+      width: 40%;
+    }
+
+    .menu-toggle {
+      display: block;
+      cursor: pointer;
+      margin-right: 20px;
+      position: fixed;
+      right: 0;
+    }
+
+    .menu-toggle:hover {
+      transform: scale(1.1); 
+      
+    }
+
+    .bar {
+      width: 25px;
+      height: 3px;
+      background-color: #DD71C6;
+      margin: 4px 0;
+      border-radius: 5px;
+    }
+
+    .menu {
+      display: none;
+      position: fixed;
+      background-color: #b9b9b9;
+      border-radius: 20px 0 0 20px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+      width: 200px;
+      right: 0;
+      top: 47px;
+      opacity: 0;
+      transform: translateY(-10px);
+      transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    }
+  
+    .menu.show {
+      display: block;
+      opacity: 1; 
+      transform: translateY(0);
+    }
+
+    .menu a {
+      color: white;
+      text-decoration: none;
+      padding: 10px;
+      display: block;
+      transition: background-color 0.3s;
+    }
+
+    .menu a:hover {
+      background-color: #DD71C6 ;
+      background-color: #DD71C6(255, 255, 255, 0.2);
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      opacity: 0.6;
+    }
+
+    .menu ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .box-countdown {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      background-color: #F9F9F9;
+      border-radius: 10px;
+      max-width: 80%;
+      margin: 0 auto;
+      border-radius: 50px;
+    }
+
+    .box-countdown:hover {
+      background-color: #DD71C6;
+      opacity: 0.8;
+    }
+
+    .box-countdown:hover .countdown-time{
+      color: #f3f3f3;
+    }
+
+    .box-countdown:hover .countdown-item{
+      color: #000000;
+    }
+
+    .box-countdown:hover #offer-text{
+      color: #ffffff;
+    }
+
+    .countdown-time {
+      font-size: 1.5rem;
+  }
+
+    #offer-text {
+      color: #333333;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 400;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    
+  }
+  
+.box-countdown {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  background-color: #F9F9F9;
+  border-radius: 10px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  border-radius: 50px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.countdown-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding-bottom: 20px;
+  gap: 15px; 
+}
+
+#countdown {
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  gap: 15px; 
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #0083D3
+}
+
+.countdown-time {
+  color: #333333;
+  font-weight: 500;
+  font-size: 2rem;
+}
+
+ .faq {
+    margin: auto;
+    width: 70%;
+    margin-top: 10px;
+  }
+
+  .faq h1{
+    text-align: center;
+  }
+
+  .faq ul {
+    padding: 0;
+    list-style: none;
+  }
+  
+  .faq li {
+    margin-bottom: 20px;
+    background-color: #F9F9F9;
+    border-radius: 11px;
+}
+
+.faq li .question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.faq li .question img {
+  transition: transform 0.3s;
+}
+
+.faq li .answer {
+  display: none;
+  padding: 10px;
+  color: white;
+  background-color: #DD71C6;
+  border-radius: 0px 0px 11px 11px;
+  
+}
+
+.faq li.active .answer {
+  display: block;
+}
+
+.faq li.active .question img {
+  transform: rotate(180deg);
+}
+
+.faq li .question:hover {
+  background-color: #f0f0f0;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+
+ 
